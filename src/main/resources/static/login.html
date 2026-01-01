@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | SSR IT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="/js/auth.js"></script>
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Login to continue your learning journey</p>
+
+        <form onsubmit="loginUser(event)">
+
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="loginEmail" placeholder="Email Address" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+            </div>
+
+            <div class="options">
+                <a href="/forgot-password.html">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="primary-btn">
+                Login
+            </button>
+
+            <p class="switch">
+                Don’t have an account?
+                <a href="/html/register.html">Create Account</a>
+            </p>
+
+        </form>
+    </div>
+
+</div>
+
+<script src="/js/auth.js"></script>
+</body>
+</html>
+<script src="/js/auth.js"></script>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSR IT – User Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Auth CSS -->
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+        <h2>Create Your Account</h2>
+        <p class="subtitle">Join SSR IT for training & placement</p>
+
+        <form id="registerForm" enctype="multipart/form-data" method="post">
+
+            <!-- Full Name -->
+            <div class="input-group">
+                <i class="fa fa-user"></i>
+                <input type="text"
+                       name="name"
+                       placeholder="Full Name"
+                       required>
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+                <i class="fa fa-envelope"></i>
+                <input type="email"
+                       name="email"
+                       placeholder="Email Address"
+                       required>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <i class="fa fa-lock"></i>
+                <input type="password"
+                       name="password"
+                       placeholder="Create Password"
+                       required>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="input-group">
+                <i class="fa fa-lock"></i>
+                <input type="password"
+                       name="confirmPassword"
+                       placeholder="Confirm Password"
+                       required>
+            </div>
+
+            <!-- Mobile -->
+            <div class="input-group">
+                <i class="fa fa-phone"></i>
+                <input type="text"
+                       name="mobile"
+                       placeholder="Mobile Number"
+                       maxlength="10"
+                       required>
+            </div>
+
+            <!-- Qualification -->
+            <div class="input-group">
+                <i class="fa fa-graduation-cap"></i>
+                <input type="text"
+                       name="highestQualification"
+                       placeholder="Highest Qualification">
+            </div>
+
+            <!-- Work Status -->
+            <div class="input-group">
+                <i class="fa fa-briefcase"></i>
+                <select name="workStatus" required>
+                    <option value="">Select Work Status</option>
+                    <option value="Fresher">Fresher</option>
+                    <option value="Experienced">Experienced</option>
+                    <option value="Non-IT">Non-IT</option>
+                </select>
+            </div>
+
+            <!-- Years of Experience -->
+            <div class="input-group">
+                <i class="fa fa-chart-line"></i>
+                <input type="number"
+                       name="yearOfExperience"
+                       placeholder="Years of Experience"
+                       min="0"
+                       max="50">
+            </div>
+
+            <!-- Resume Upload -->
+            <div class="input-group file">
+                <label>Upload Resume</label>
+                <input type="file"
+                       name="resume"
+                       accept=".pdf,.doc,.docx">
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="primary-btn">
+                Register
+            </button>
+
+            <!-- Login Link -->
+            <p class="switch">
+                Already have an account?
+                <a href="/login.html">Login</a>
+            </p>
+
+        </form>
+    </div>
+
+</div>
+
+<script src="/js/auth.js"></script>
+</body>
+</html>

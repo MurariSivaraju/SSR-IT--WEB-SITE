@@ -1,0 +1,85 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f7fb;
+    margin: 0;
+    padding: 30px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toolbar {
+    margin: 20px 0;
+}
+
+input {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    background: #1f3c88;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #162d6a;
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+}
+
+thead {
+    background: linear-gradient(135deg, #1f3c88, #4e73df);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f2f5fb;
+}
+
+#pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pagination button.active {
+    background: #4e73df;
+}
+
+/* LOGIN */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 320px;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}

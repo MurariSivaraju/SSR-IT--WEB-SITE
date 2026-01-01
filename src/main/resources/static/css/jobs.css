@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f7fb;
+}
+
+/* Header */
+.jobs-header {
+    background: #0f172a;
+    color: white;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logout-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Hero */
+.jobs-hero {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Jobs Grid */
+.jobs-container {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* Job Card */
+.job-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.job-card:hover {
+    transform: translateY(-6px);
+}
+
+.job-card h3 {
+    margin-top: 12px;
+    color: #1e293b;
+}
+
+/* Company Tags */
+.company-tag {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    display: inline-block;
+}
+
+.green { background: #14b8a6; }
+.blue { background: #1e3a8a; }
+.red { background: #ef4444; }
+.purple { background: #7c3aed; }
+.orange { background: #f97316; }
+.teal { background: #0d9488; }
+
+/* Apply Button */
+.apply-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #0f172a;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background: #020617;
+}

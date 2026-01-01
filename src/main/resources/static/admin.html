@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body onload="initAdmin()">
+
+<header class="admin-header">
+    <h2>Admin Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+</header>
+
+<section class="toolbar">
+    <input id="search" placeholder="Search users by name or email">
+    <button onclick="loadUsers(0)">Search</button>
+</section>
+
+<table id="usersTable">
+    <thead>
+        <tr>
+            <th>ID</th><th>Name</th><th>Email</th><th>Mobile</th>
+            <th>Qualification</th><th>Status</th><th>Exp</th>
+            <th>Resume</th><th>Action</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<div id="pagination"></div>
+
+<script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+/* =========================
+   PAGE BACKGROUND
+========================= */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(120deg, #0a3d62, #1e90ff);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.auth-container {
+    width: 100%;
+    max-width: 520px;
+    padding: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+.auth-card {
+    background: #ffffff;
+    padding: 32px 34px;
+    border-radius: 22px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   TITLE
+========================= */
+.auth-card h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0a3d62;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 22px;
+}
+
+/* =========================
+   INPUT GROUP
+========================= */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f9fbff;
+    border: 1.5px solid #d0d9e8;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Focus effect */
+.input-group:focus-within {
+    border-color: #1e90ff;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(30,144,255,0.15);
+}
+
+/* ICON */
+.input-group i {
+    font-size: 16px;
+    color: #1e90ff;
+    margin-right: 12px;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* INPUTS & SELECT */
+.input-group input,
+.input-group select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #1f2933;
+    height: 22px;
+}
+
+/* Placeholder */
+.input-group input::placeholder {
+    color: #6b7280;
+}
+
+/* Remove number arrows */
+.input-group input[type="number"] {
+    appearance: textfield;
+}
+.input-group input[type="number"]::-webkit-inner-spin-button,
+.input-group input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Select fix */
+.input-group select {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* =========================
+   FILE INPUT
+========================= */
+.input-group.file {
+    display: block;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.input-group.file label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.input-group.file input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1.5px dashed #1e90ff;
+    background: #f8fbff;
+    cursor: pointer;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.primary-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #1e90ff, #0a3d62);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: all 0.35s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(30,144,255,0.45);
+}
+
+/* =========================
+   SWITCH LINK
+========================= */
+.switch {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 18px;
+    color: #475569;
+}
+
+.switch a {
+    color: #1e90ff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* =========================
+   LOGIN OPTIONS
+========================= */
+.options {
+    text-align: right;
+    margin: 6px 0 14px;
+}
+
+.options a {
+    font-size: 13px;
+    color: #1e90ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+
