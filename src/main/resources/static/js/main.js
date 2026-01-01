@@ -72,9 +72,35 @@ function scrollToSection(id) {
 }
 
 /* CONTACT */
-function submitContact(e) {
-    e.preventDefault();
-    alert("Thank you for contacting SSR IT!");
+async function submitContact(event) {
+    event.preventDefault(); // stop page refresh
+
+    const data = {
+        name: document.getElementById("contactName").value,
+        email: document.getElementById("contactEmail").value,
+        phoneNumber: document.getElementById("contactPhone").value,
+        message: document.getElementById("contactMessage").value
+    };
+
+    try {
+        const response = await fetch("http://localhost:8081/api/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            alert("Message sent successfully!");
+            document.querySelector(".contact-form").reset(); // ✅ clears form
+        } else {
+            alert("Failed to send message. Please try again.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Server error. Please try later.");
+    }
 }
 
 /* DARK MODE */
@@ -232,46 +258,11 @@ const jobs = [
     }
 ];
 
-function loadJobs() {
-    const skill = skillFilter.value;
-    const location = locationFilter.value;
-    const company = companyFilter.value;
-
-    const grid = document.getElementById("jobsGrid");
-    grid.innerHTML = "";
-
-    jobs
-        .filter(j =>
-            (!skill || j.skill === skill) &&
-            (!location || j.location === location) &&
-            (!company || j.company === company)
-        )
-        .forEach(j => {
-            grid.innerHTML += `
-                <div class="job-card">
-                    <div class="job-logo" style="background:${j.color}">
-                        ${j.company}
-                    </div>
-                    <div class="job-body">
-                        <h3>${j.company} Hiring</h3>
-                        <h4>${j.role}</h4>
-                        <p><b>Package:</b> ${j.package}</p>
-                        <p><b>Location:</b> ${j.location}</p>
-                        <button class="apply-btn">Apply Now</button>
-                    </div>
-                </div>
-            `;
-        });
-}
-
 function resetFilters() {
     skillFilter.value = "";
     locationFilter.value = "";
     companyFilter.value = "";
     loadJobs();
 }
-
-// Auto load jobs on page open
-loadJobs();
 
 
